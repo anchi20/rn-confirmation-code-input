@@ -87,7 +87,8 @@ export default class ConfirmationCodeInput extends Component {
         newCodeArr[i] = '';
       }
     }
-    
+    this.props.onChangeCode && this.props.onChangeCode(newCodeArr.join(''));
+
     this.setState({
       codeArr: newCodeArr,
       currentIndex: index
